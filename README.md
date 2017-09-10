@@ -17,3 +17,6 @@
 	
 		params:
 		
+Crypto在win下用不了？
+
+	http://blog.csdn.net/werewolf_st/article/details/45935913
