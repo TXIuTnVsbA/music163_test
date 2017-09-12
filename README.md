@@ -16,6 +16,8 @@
 	断点关键字：
 	
 		params:
+	或者
+		var h = {}
 		
 Crypto在win下用不了？
 
