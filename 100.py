@@ -9,7 +9,6 @@ import re,time
 from Crypto.Cipher import AES
 from pprint import pprint
 session = requests.Session()
-#proxies = {'http':'http://localhost:8888','https':'https://localhost:8888'} #debug
 modulus = ('00e0b509f6259df8642dbc35662901477df22677ec152b5ff68ace615bb7'
            'b725152b3ab17a876aea8a5aa76d2e417629ec4ee341f56135fccf695280'
            '104e0312ecbda92557c93870114af6c9d05c4f7f0c3685b7a46bee255932'
@@ -28,7 +27,6 @@ header = {
             'Origin':'http://music.163.com',
             'User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.152 Safari/537.36',
 }
-#test={"logs":"[{\"action\":\"play\",\"json\":{\"type\":\"song\",\"wifi\":0,\"download\":0,\"id\":36990233,\"time\":214,\"end\":\"ui\"}}]","csrf_token":"9b46911e2b864b0bd3282bda2bb26c16"}
 default_timeout = 10
 def aesEncrypt(text, secKey):
     pad = 16 - len(text) % 16
@@ -152,7 +150,6 @@ class netease():
         for cookie in cookies:
             if cookie == '__csrf':
                 csrf = cookies[cookie]
-                #data = {"logs":"[{\"action\":\"play\",\"json\":{\"type\":\"song\",\"id\":"+str(sid)+"}}]","csrf_token":csrf}
                 data = {"logs":"[{\"action\":\"play\",\"json\":{\"type\":\"song\",\"wifi\":0,\"download\":0,\"id\":"+str(sid)+",\"time\":320,\"end\":\"ui\"}}]","csrf_token":csrf}
                 data = encrypted_request(data)
                 action += csrf
