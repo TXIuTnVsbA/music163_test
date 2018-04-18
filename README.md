@@ -9,12 +9,28 @@ FM_play_test.py
 		
 		原理：
 		
-				利用web版网易云的api获取私人Fm的歌单，
+			利用web版网易云的api获取私人Fm的歌单，
 		
-				再利用songid转换成mp3_url的api下载mp3，
+			再利用songid转换成mp3_url的api下载mp3，
 		
-				播放mp3并提交数据表示已经听完一首歌且红星这首歌，
+			播放mp3并提交数据表示已经听完一首歌且红星这首歌，
 		
+
+test_get_song_url.py
+
+		songid转换成mp3_url的api
+		
+test_phone_login.py
+
+		登录函数
+		
+tornado_test_url.py
+
+		将songid转换成mp3_url，再套用tornado框架反馈
+		
+100.py
+
+		利用提交函数刷听歌量
 
 大部分参考：
 
