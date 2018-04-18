@@ -190,4 +190,4 @@ class netease():
 if __name__ == '__main__':
     n = netease()
     n.login(手机号或者用户名,明文密码,False)
-    n.send(10)
+    n.send(100)
